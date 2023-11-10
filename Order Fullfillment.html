@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fulfillment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        select {
+            height: 35px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Order Fulfillment</h1>
+        
+        <h2>Transaction Details</h2>
+        <label for="transactionID">Transaction ID or Reference Number:</label>
+        <input type="text" id="transactionID" name="transactionID" required>
+
+        <!-- Device Details Section -->
+
+        <h2>Device Details</h2>
+        <label for="deviceName">IMEI Number or ESN Number:</label>
+        <input type="text" id="deviceName" name="deviceName" required>
+        
+        <!-- Shipping Info Section -->
+        
+        <h2>Shipping Information</h2>
+        <label for="shippingMethod">Shipping Method:</label>
+        <select id="shippingMethod" name="shippingMethod" required>
+            <option value="standard">Standard</option>
+            <option value="expedited">Expedited</option>
+            <option value="overnight">Overnight</option>
+        </select>
+        
+        <!-- Payment Information Section -->        
+        <h2>Payment Information</h2>
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+            <option value="debit-credit-card">Debit/Credit Card</option>
+            <option value="money-order">Money Order</option>
+            <option value="pledge">Pledge</option>
+        </select>  
+        <!-- Notes or Comments Section -->
+        
+        <h3>Additional Notes or Comments</h3>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+        
+        <button type="submit">Submit</button>
+    </div>
+</body>
+</html>
